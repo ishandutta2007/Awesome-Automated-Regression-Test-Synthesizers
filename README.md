@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4ttF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers?style=flat-square&logo=github&color=gold" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers?style=flat-square&logo=github" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat-square" alt="License"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Automated-Regression-Test-Synthesizers/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"/></a>
@@ -175,7 +175,7 @@ Contributions are warmly encouraged! To propose a new SaaS platform or open-sour
 1. 🍴 Fork this repository.
 2. 📝 Edit `README.md` following the existing format:
    - For **SaaS platforms**: Add to the table with specific company size (valuation/revenue), exact starting tier price, exact free tier / trial limits, and key capabilities.
-   - For **Open-Source projects**: Include project name, official URL, social star badge linked to its `/stargazers` page, and a concise 1–2 sentence description. Maintain descending order by star count.
+   - For **Open-Source projects**: Include project name, official URL, social Stars_Badge linked to its `/stargazers` page, and a concise 1–2 sentence description. Maintain descending order by Stars_Count.
 3. 🚀 Submit a Pull Request with a clear description of the project.
 
 ---
