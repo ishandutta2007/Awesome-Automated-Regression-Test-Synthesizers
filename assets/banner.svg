@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#070a14"/>
+    </linearGradient>
+
+    <!-- Animated Neon Gradients -->
+    <linearGradient id="primaryNeon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1">
+        <animate attributeName="stop-color" values="#6366f1;#8b5cf6;#06b6d4;#6366f1" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#3b82f6;#10b981;#a855f7" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#6366f1;#8b5cf6;#06b6d4" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Background Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5"/>
+      <circle cx="40" cy="0" r="1.5" fill="#334155" fill-opacity="0.6"/>
+    </pattern>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        letter-spacing: -0.5px;
+        fill: #ffffff;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        fill: #94a3b8;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+      .flow-pulse {
+        animation: flowDash 3s linear infinite;
+      }
+      @keyframes flowDash {
+        from { stroke-dashoffset: 100; }
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="380" rx="20" fill="url(#bgGrad)"/>
+  <rect width="1200" height="380" rx="20" fill="url(#grid)" />
+
+  <!-- Animated Ambient Glow Blobs in Background -->
+  <g opacity="0.35">
+    <circle cx="200" cy="80" r="140" fill="#6366f1" filter="url(#glow)">
+      <animate attributeName="cx" values="180;240;180" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="70;110;70" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.25;0.45;0.25" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1000" cy="300" r="160" fill="#06b6d4" filter="url(#glow)">
+      <animate attributeName="cx" values="1020;960;1020" dur="12s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="320;260;320" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="600" cy="190" r="180" fill="#8b5cf6" filter="url(#glow)">
+      <animate attributeName="r" values="160;200;160" dur="11s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Subtle Dynamic Tech / Flow Lines at the Bottom Area (Kept Away from Text) -->
+  <g opacity="0.6">
+    <!-- Connecting pipeline trace -->
+    <path d="M 150 315 L 350 315 L 420 315 L 600 315 L 780 315 L 850 315 L 1050 315" 
+          fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="6,6" />
+    
+    <path d="M 150 315 L 350 315 L 420 315 L 600 315 L 780 315 L 850 315 L 1050 315" 
+          fill="none" stroke="url(#primaryNeon)" stroke-width="2.5" stroke-dasharray="30, 150" class="flow-pulse">
+      <animate attributeName="stroke-dashoffset" values="360; 0" dur="4s" repeatCount="indefinite" />
+    </path>
+
+    <!-- Pipeline Step Nodes -->
+    <g transform="translate(180, 315)">
+      <circle r="7" fill="#0f172a" stroke="#6366f1" stroke-width="2"/>
+      <circle r="3" fill="#818cf8"/>
+      <text y="-14" text-anchor="middle" class="pill-text" fill="#94a3b8">RECORD</text>
+    </g>
+    <g transform="translate(420, 315)">
+      <circle r="7" fill="#0f172a" stroke="#8b5cf6" stroke-width="2"/>
+      <circle r="3" fill="#c084fc"/>
+      <text y="-14" text-anchor="middle" class="pill-text" fill="#94a3b8">SYNTHESIZE</text>
+    </g>
+    <g transform="translate(680, 315)">
+      <circle r="7" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+      <circle r="3" fill="#38bdf8"/>
+      <text y="-14" text-anchor="middle" class="pill-text" fill="#94a3b8">SELF-HEAL</text>
+    </g>
+    <g transform="translate(940, 315)">
+      <circle r="7" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+      <circle r="3" fill="#34d399"/>
+      <text y="-14" text-anchor="middle" class="pill-text" fill="#94a3b8">REGRESSION VERIFIED</text>
+    </g>
+  </g>
+
+  <!-- Decorative Outer Glowing Border -->
+  <rect x="2" y="2" width="1196" height="376" rx="19" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+
+  <!-- Top Badges / Pills Header -->
+  <g transform="translate(600, 62)" text-anchor="middle">
+    <!-- Pill 1: AI-Powered -->
+    <g transform="translate(-230, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" opacity="0.9"/>
+      <circle cx="-50" cy="0" r="4" fill="#818cf8">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="5" y="4" text-anchor="middle" class="pill-text" fill="#c7d2fe">✨ AI SYNTHESIS</text>
+    </g>
+
+    <!-- Pill 2: Self-Healing -->
+    <g transform="translate(-70, 0)">
+      <rect x="-75" y="-14" width="150" height="28" rx="14" fill="#1e103a" stroke="#8b5cf6" stroke-width="1" opacity="0.9"/>
+      <circle cx="-55" cy="0" r="4" fill="#a78bfa">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      <text x="5" y="4" text-anchor="middle" class="pill-text" fill="#ddd6fe">🛡️ SELF-HEALING</text>
+    </g>
+
+    <!-- Pill 3: Autonomous Suites -->
+    <g transform="translate(95, 0)">
+      <rect x="-75" y="-14" width="150" height="28" rx="14" fill="#082f49" stroke="#06b6d4" stroke-width="1" opacity="0.9"/>
+      <circle cx="-55" cy="0" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite" />
+      </circle>
+      <text x="5" y="4" text-anchor="middle" class="pill-text" fill="#bae6fd">⚡ AUTO-SUITES</text>
+    </g>
+
+    <!-- Pill 4: Open Source & Enterprise -->
+    <g transform="translate(255, 0)">
+      <rect x="-70" y="-14" width="140" height="28" rx="14" fill="#064e3b" stroke="#10b981" stroke-width="1" opacity="0.9"/>
+      <circle cx="-50" cy="0" r="4" fill="#34d399">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.8s" repeatCount="indefinite" />
+      </circle>
+      <text x="5" y="4" text-anchor="middle" class="pill-text" fill="#a7f3d0">🌐 OPEN &amp; SAAS</text>
+    </g>
+  </g>
+
+  <!-- FOREGROUND: Title & Subtitle (Protected with Semi-Translucent Scrim & Drop Shadow) -->
+  <g id="foreground-content" transform="translate(600, 160)" text-anchor="middle">
+    <!-- Subtle dark backdrop to guarantee 100% contrast against any animation -->
+    <rect x="-480" y="-35" width="960" height="95" rx="12" fill="#090d16" fill-opacity="0.75" filter="url(#subtleGlow)"/>
+
+    <!-- Main Title with Gradient Fill -->
+    <text x="0" y="8" text-anchor="middle" class="title-text">
+      Awesome Automated Regression Test Synthesizers
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="42" text-anchor="middle" class="subtitle-text">
+      Curated Directory of Autonomous Quality Engineering, AI Test Generation &amp; Self-Healing Frameworks
+    </text>
+  </g>
+
+  <!-- Tagline below foreground card -->
+  <g transform="translate(600, 245)" text-anchor="middle">
+    <text class="subtitle-text" font-size="14px" fill="#64748b">
+      Accelerating CI/CD delivery with traffic-based recording, contract synthesis, and LLM test agents
+    </text>
+  </g>
+</svg>
